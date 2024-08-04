@@ -17,4 +17,32 @@ Enable Developer Mode in Windows settings:
 
 ### Step 4: Run WinAppDriver
 Run `WinAppDriver.exe` from the installation directory. The default installation directory is: 
-C:\Program Files (x86)\Windows Application Driver
+`C:\Program Files (x86)\Windows Application Driver`
+
+# Project Setup
+
+## Dependencies
+
+To ensure your project runs correctly, you need to use specific versions of certain dependencies. Follow the instructions below based on your project type.
+
+### Java Projects
+
+For Java projects using Maven, add the following dependencies to your `pom.xml` file:
+
+```xml
+<dependencies>
+    <!-- Appium Java Client -->
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>7.5.1</version> <!-- Ensure this version is used -->
+    </dependency>
+
+    <!-- Selenium Java -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.141.59</version> <!-- Ensure this version is used -->
+    </dependency>
+</dependencies>
+
