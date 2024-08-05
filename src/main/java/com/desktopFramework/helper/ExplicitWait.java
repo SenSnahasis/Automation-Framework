@@ -1,6 +1,6 @@
-package desktopFramework.helper;
+package com.desktopFramework.helper;
 
-import desktopFramework.utility.CONSTANT;
+import com.desktopFramework.utility.CONSTANT;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -39,6 +39,5 @@ public class ExplicitWait extends CommonHelper{
         WebDriverWait wait = new WebDriverWait(desktopDriver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(getElement(element))));
     }
-
 
 }

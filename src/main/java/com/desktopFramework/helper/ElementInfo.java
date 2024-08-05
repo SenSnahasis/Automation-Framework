@@ -1,4 +1,4 @@
-package desktopFramework.helper;
+package com.desktopFramework.helper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
