@@ -2,7 +2,7 @@
   <artifact type="jar" name="desktop_automation_framework:jar">
     <output-path>$PROJECT_DIR$/target/desktop_automation_framework_jar</output-path>
     <root id="archive" name="desktop_automation_framework.jar">
-      <element id="module-output" name="desktop_automation_framework" />
+      <element id="module-output" name="automation_framework" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/appium/java-client/9.2.2/java-client-9.2.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar" path-in-jar="/" />
