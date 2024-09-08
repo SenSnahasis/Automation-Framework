@@ -1,6 +1,6 @@
 package com.webFramework.helper;
 
-import com.desktopFramework.utility.CONSTANT;
+import com.webFramework.utility.CONSTANT;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,27 +16,27 @@ public class ExplicitWait extends CommonHelper {
         }
     }
     public static void waitForVisibility(By element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(ExpectedConditions.visibilityOf(getElement(element)));
     }
     public static void waitForVisibility(By element, int pollingTime) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(pollingTime));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
         wait.until(ExpectedConditions.visibilityOf(getElement(element)));
     }
     public static void presenceOfElementLocated(By element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
     }
     public static void presenceOfAllElementLocated(By element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(element));
     }
     public static void waitForClickable(By element, int pollingTime) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(pollingTime));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(getElement(element))));
     }
     public static void waitForClickable(By element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(getElement(element))));
     }
 

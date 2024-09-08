@@ -13,4 +13,7 @@ public class TextBox extends CommonHelper {
         clearText(element);
         sendKeys(element,value);
     }
+    public static String getText(By locator) {
+        return getElement(locator).getText();
+    }
 }

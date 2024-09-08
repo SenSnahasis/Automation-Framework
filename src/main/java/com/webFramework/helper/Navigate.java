@@ -2,30 +2,30 @@ package com.webFramework.helper;
 
 public class Navigate extends CommonHelper{
     public static void navigateTo(String url) {
-        driver.navigate().to(url);
+        webDriver.navigate().to(url);
     }
 
     public static void refreshPage() {
-        driver.navigate().refresh();
+        webDriver.navigate().refresh();
     }
 
     public static String getTitle() {
-        return driver.getTitle();
+        return webDriver.getTitle();
     }
 
     public static String getCurrentUrl() {
-        return driver.getCurrentUrl();
+        return webDriver.getCurrentUrl();
     }
 
     public static void quit() {
-        driver.quit();
+        webDriver.quit();
     }
 
     public static void navigateForward() {
-        driver.navigate().forward();
+        webDriver.navigate().forward();
     }
 
     public static void navigateBack() {
-        driver.navigate().back();
+        webDriver.navigate().back();
     }
 }

@@ -11,9 +11,8 @@ public class ElementInfo extends CommonHelper{
         }catch (NoSuchElementException e){
             return false;
         }
-
     }
-    public static String getAttributeValue(By element,String attributeName){
+    public static String getAttributeValue(By element, String attributeName){
         try {
             return getElement(element).getAttribute(attributeName);
         }catch (StaleElementReferenceException e){
@@ -24,5 +23,4 @@ public class ElementInfo extends CommonHelper{
     public static String getText(By element) {
         return getElement(element).getText();
     }
-
 }
