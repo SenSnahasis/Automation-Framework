@@ -61,4 +61,35 @@ public class ExplicitWait extends CommonHelper {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("Complete"));
     }
+
+    public static void waitForVisibility(By locator, int pollingTime) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static void waitForPresence(By locator, int pollingTime) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public static void waitForElementsToBeClickable(By locator, int pollingTime) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waitForElementToBeVisibleAndClickable(By locator, int pollingTime) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waitForInvisibility(By locator, int pollingTime) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+
+    public static void waitAndSwitchToFrame(By locator, int pollingTime) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(pollingTime));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(locator));
+    }
 }
