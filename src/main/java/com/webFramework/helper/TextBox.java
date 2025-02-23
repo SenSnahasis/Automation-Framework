@@ -16,4 +16,14 @@ public class TextBox extends CommonHelper {
     public static String getText(By locator) {
         return getElement(locator).getText();
     }
+
+    public static void typeText(By locator, String value) {
+        for (int i=0; i<value.length(); i++) {
+            getElement(locator).sendKeys(String.valueOf(value.charAt(i)));
+        }
+    }
+
+    public static void clickInTextBox(By locator) {
+        getElement(locator).click();
+    }
 }
