@@ -64,4 +64,13 @@ public class ElementInfo extends CommonHelper {
     public static int getElementCount(By locator) {
         return getListOfWebElements(locator).size();
     }
+
+    public static boolean isAttributePresent(By element, String attribute) {
+        try {
+            String value = getAttributeValue(element, attribute);
+            return value != null;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
 }
