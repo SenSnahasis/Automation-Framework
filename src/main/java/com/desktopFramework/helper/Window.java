@@ -27,4 +27,8 @@ public class Window extends CommonHelper{
             }
         }
     }
+
+    public static void switchToOriginalWindow() {
+        desktopDriver.switchTo().window(CONSTANT.ORIGINAL_WINDOW);
+    }
 }
